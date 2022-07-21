@@ -1,4 +1,6 @@
-export default function Page() {
+export default function Page(props) {
+  console.log("Foo Props", props);
+
   return <>Foo</>
 }
 

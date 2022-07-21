@@ -1,4 +1,6 @@
-export default function Page() {
+export default function Page(props) {
+  console.log("Root Props", props);
+
   return <>Root</>
 }
 
@@ -16,7 +18,11 @@ export const getStaticPaths = async () => {
   console.log("Root Static Paths")
 
   return {
-    paths: [],
-    fallback: "blocking"
+    paths: [{
+      params: {
+        slug: ["foo", "bar"]
+      }
+    }],
+    fallback: false
   }
 }
