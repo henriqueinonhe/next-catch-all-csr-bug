@@ -1,4 +1,4 @@
-export default function Page(props) {
+export default function Root(props) {
   console.log("Root Props", props);
 
   return <>Root</>
@@ -6,7 +6,7 @@ export default function Page(props) {
 
 export const getStaticProps = async () => {
   console.log("Root Static Props")
-
+  
   return {
     props: {
       RootProps: true
